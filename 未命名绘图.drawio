@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram name="第 1 页" id="a1BwOLrXWPBUj6n1oyxn">
+    <mxGraphModel dx="2802" dy="1046" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-2" value="Single Node" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="170" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-5" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="230" width="240" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-19" value="/databricks/driver/.../part-001.json.gz&lt;div&gt;/databricks/driver/.../part-001.json.gz&lt;/div&gt;&lt;div&gt;/databricks/driver/.../_SUCCESS&lt;/div&gt;&lt;div&gt;&lt;div&gt;/databricks/driver/.../_COMMITTED&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UQyt5uHhcSVYhBcTNX8b-5">
+          <mxGeometry x="10" y="150" width="202.5" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-20" value="/databricks/driver" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UQyt5uHhcSVYhBcTNX8b-5">
+          <mxGeometry x="25" y="330" width="195" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-6" value="&amp;nbsp;Driver" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-7" value="df = spark read table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="127.5" y="263" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-8" value="transform_df = transform(df)&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="60" y="340" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-9" value="json_files = save df as json file(s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="60" y="430" width="255" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-10" value="encrypt josn files and generate manifest file" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="50" y="525" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-11" value="put target files to sftp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="115" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="450" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.004;entryY=0.309;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-8" target="UQyt5uHhcSVYhBcTNX8b-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="440" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-9" target="UQyt5uHhcSVYhBcTNX8b-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="440" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-10" target="UQyt5uHhcSVYhBcTNX8b-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="590" as="sourcePoint" />
+            <mxPoint x="447" y="557" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.803;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-11" target="UQyt5uHhcSVYhBcTNX8b-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="257.5" y="650" as="sourcePoint" />
+            <mxPoint x="450" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-21" value="partitions" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-22" value="Multi Nodes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="127.5" y="790" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-23" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="860" width="240" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UQyt5uHhcSVYhBcTNX8b-23">
+          <mxGeometry x="25" y="330" width="195" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-50" value="&lt;div&gt;/databricks/driver/.../_SUCCESS&lt;/div&gt;&lt;div&gt;&lt;div&gt;/databricks/driver/.../_COMMITTED&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UQyt5uHhcSVYhBcTNX8b-23">
+          <mxGeometry x="17.5" y="150" width="202.5" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-26" value="&amp;nbsp;Driver" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="830" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-27" target="UQyt5uHhcSVYhBcTNX8b-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="923" />
+              <mxPoint x="20" y="1172" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-27" value="df = spark read table" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="127.5" y="893" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-28" value="transform_df = transform(df)&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="70" y="970" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-29" target="UQyt5uHhcSVYhBcTNX8b-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-29" target="UQyt5uHhcSVYhBcTNX8b-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-29" value="json_files = save df as json file(s)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1060" width="255" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-30" value="encrypt josn files and generate manifest file" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1155" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-31" value="put target files to sftp" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="115" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.01;entryY=0.67;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-30" target="UQyt5uHhcSVYhBcTNX8b-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1220" as="sourcePoint" />
+            <mxPoint x="447" y="1187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-36" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.851;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-31" target="UQyt5uHhcSVYhBcTNX8b-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="257.5" y="1280" as="sourcePoint" />
+            <mxPoint x="450" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-38" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="-390" y="890" width="350" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-42" value="/databricks/driver/.../part-001.json.gz" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UQyt5uHhcSVYhBcTNX8b-38">
+          <mxGeometry x="10" y="85" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-39" value="Worker" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="870" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-40" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="-390" y="1122" width="350" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-43" value="/databricks/driver/.../part-002.json.gz" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="UQyt5uHhcSVYhBcTNX8b-40">
+          <mxGeometry x="7.5" y="88" width="282.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-41" value="Worker" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-260" y="1100" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.008;entryY=0.168;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-27" target="UQyt5uHhcSVYhBcTNX8b-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.372;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-28" target="UQyt5uHhcSVYhBcTNX8b-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="1000" />
+              <mxPoint x="40" y="964" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UQyt5uHhcSVYhBcTNX8b-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.002;entryY=0.374;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UQyt5uHhcSVYhBcTNX8b-28" target="UQyt5uHhcSVYhBcTNX8b-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="1000" />
+              <mxPoint x="40" y="1197" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
